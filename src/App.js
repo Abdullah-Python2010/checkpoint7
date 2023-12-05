@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './App.css'
 const App = () => {
   // State for the person's information
   const [person, setPerson] = useState({
@@ -41,10 +41,11 @@ const App = () => {
       
       {/* Conditionally render the person's profile if 'show' is true */}
       {show && (
-        <div>
+        <div className="card">
+
+          <img src={person.imgSrc} alt="Profile" />
           <h1>{person.fullName}</h1>
           <p>{person.bio}</p>
-          <img src={person.imgSrc} alt="Profile" />
           <p>Profession: {person.profession}</p>
         </div>
       )}
